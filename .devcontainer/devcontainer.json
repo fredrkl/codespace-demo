@@ -9,7 +9,11 @@
 			"vscodevim.vim",
 			"codecontemplator.kubeseal",
 			"DavidAnson.vscode-markdownlint"
-		]
+		],
+		"settings": {
+			"workbench.colorTheme":"Quiet Light",
+			"editor.minimap.enabled": false
+		}
 	}
 }
 }
