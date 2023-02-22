@@ -13,8 +13,7 @@
       "version" : "latest"
     }
   },
-  "onCreateCommand": ". ./.devcontainer/setup.sh",
-  "postCreateCommand": ". ~/.bashrc",
+  "postCreateCommand": "bash -i ./.devcontainer/setup.sh",
    "customizations": {
         "vscode": {
    		    "extensions": [
