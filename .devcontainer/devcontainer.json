@@ -1,20 +1,33 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
-},
-"customizations": {
-	"vscode": {
-		"extensions": [
-			"ms-azuretools.vscode-bicep",
-			"vscodevim.vim",
-			"codecontemplator.kubeseal",
-			"DavidAnson.vscode-markdownlint",
-			"GitHub.copilot"
-		],
-		"settings": {
-			"workbench.colorTheme":"Quiet Light",
-			"editor.minimap.enabled": false
-		}
-	}
-}
+    "ghcr.io/jsburckhardt/devcontainer-features/flux:1": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "version": "latest",
+      "installBicep": true
+    },
+    "ghcr.io/devcontainers-contrib/features/kubectl-asdf:2": {
+      "version" : "latest"
+    },
+    "ghcr.io/devcontainers-contrib/features/kubectx-kubens:1": {
+      "version" : "latest"
+    }
+  },
+  "onCreateCommand": ". ./.devcontainer/setup.sh",
+  "postCreateCommand": ". ~/.bashrc",
+   "customizations": {
+        "vscode": {
+   		    "extensions": [
+				"ms-azuretools.vscode-bicep",
+				"vscodevim.vim",
+				"DavidAnson.vscode-markdownlint",
+				"GitHub.copilot",
+				"ms-vsliveshare.vsliveshare"
+			],
+            "settings": {
+                "editor.minimap.enabled": false,
+                "workbench.sideBar.location": "right"
+            }
+   	    } 
+   }
 }
